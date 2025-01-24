@@ -1,4 +1,4 @@
-import sdk, { Permission, Databases } from "node-appwrite";
+import { Permission } from "node-appwrite";
 import { db, questionCollection } from "../name";
 import { databases } from "./config";
 
