@@ -7,6 +7,7 @@ import hpp from "hpp";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import healthRoute from "./routes/health.route.js";
+import userRoute from "./routes/user.route.js";
 // import xss from "xss-clean"; // Not compatible with Express v5
 // import mongoSanitize from "express-mongo-sanitize"; // Not compatible with Express v5
 
@@ -59,6 +60,7 @@ app.use(
 
 // API Routes
 app.use("/health", healthRoute);
+app.use("/api/v1/user", userRoute);
 
 //404 Route
 app.use((req, res, next) => {
