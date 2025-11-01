@@ -6,6 +6,7 @@ import helmet from "helmet";
 import hpp from "hpp";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import healthRoute from "./routes/health.route.js";
 // import xss from "xss-clean"; // Not compatible with Express v5
 // import mongoSanitize from "express-mongo-sanitize"; // Not compatible with Express v5
 
@@ -55,6 +56,9 @@ app.use(
     ],
   })
 );
+
+// API Routes
+app.use("/health", healthRoute);
 
 //404 Route
 app.use((req, res, next) => {
